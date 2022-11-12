@@ -7,14 +7,17 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Models\" />
-    <Folder Include="IoC\" />
-    <Folder Include="Services\" />
+    <PackageReference Include="Autofac.Extensions.DependencyInjection" Version="8.0.0" />
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Http.Features" Version="5.0.17" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity" Version="2.2.0" />
+    <PackageReference Include="SixLabors.ImageSharp" Version="2.1.3" />
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="AutoMapper" Version="12.0.0" />
-    <PackageReference Include="Microsoft.AspNetCore.Http.Features" Version="5.0.17" />
+    <ProjectReference Include="..\KD12BlogProject.Core\KD12BlogProject.Core.csproj" />
+    <ProjectReference Include="..\KD12BlogProject.DataAccess\KD12BlogProject.DataAccess.csproj" />
+    <ProjectReference Include="..\KD12BlogProject.Entities\KD12BlogProject.Entities.csproj" />
   </ItemGroup>
 
 </Project>

@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace KD12BlogProject.Bussiness.Extensions
 {
-    public class PictureFileEntensionsAttribute : ValidationAttribute
+    public class PictureFileExtensionAttribute : ValidationAttribute
     {
         protected override ValidationResult? IsValid(object? value, ValidationContext validationContext)
         {
