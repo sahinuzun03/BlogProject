@@ -16,9 +16,9 @@ namespace KD12BlogProject.Bussiness.Services.AppUserService
     public class AppUserService : IAppUserService
     {
         private readonly IAppUserRepository _appUserRepository;
-        private readonly IMapper _mapper;
-        private readonly UserManager<AppUser> _userManager;
-        private readonly SignInManager<AppUser> _singInManager;
+        private readonly IMapper _mapper; //Mapper kütüphanesini kullanacağız o yüdn çağırdık
+        private readonly UserManager<AppUser> _userManager; //A-Z ' ye kullanıcı yönetimini sağladığımız yapı
+        private readonly SignInManager<AppUser> _singInManager; //Kullanıcı giriş ve çıkışlarını kontrol eden sınıfımız!!
 
         public AppUserService(IAppUserRepository appUserRepository, IMapper mapper, UserManager<AppUser> userManager, SignInManager<AppUser> singInManager)
         {

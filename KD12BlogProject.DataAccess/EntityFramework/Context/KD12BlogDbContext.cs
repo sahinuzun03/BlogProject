@@ -12,6 +12,7 @@ namespace KD12BlogProject.DataAccess.EntityFramework.Context
 {
     public class KD12BlogDbContext : IdentityDbContext<AppUser>
     {
+        //Identity kullandığımız için IdentityDbContext üzerinden DbContext'imizi oluşturuyoruz.
         public KD12BlogDbContext(DbContextOptions<KD12BlogDbContext> options) : base(options)
         {
 

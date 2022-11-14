@@ -30,5 +30,25 @@ namespace KD12BlogProject.Core.Abstract.DataAccess
             Expression<Func<T, bool>> where,
             Func<IQueryable<T>, IOrderedQueryable<T>> orderBy = null,
             Func<IQueryable<T>, IIncludableQueryable<T, object>> include = null);
+
+
+        //Func<T(tanımlanacakTip),T(geridönecekTip)>()
+        //--Aşağıda Örnek Bir Func yapısının tanımı vardır.İleride Service'lerimizi yaparken detaylarını burada inceleyeceğiz.//
+        //static void Main(string[] args)
+        //{
+        //    Func<int, int> Toplam = ToplamMetodu;
+        //    Console.Write(Toplam(5));
+        //    Console.Read();
+        //}
+
+        //static int ToplamMetodu(int sayi)
+        //{
+        //    int Toplam = 0;
+        //    for (int i = 0; i <= sayi; i++)
+        //    {
+        //        Toplam += i;
+        //    }
+        //    return Toplam;
+        //}
     }
 }

@@ -10,6 +10,7 @@ namespace KD12BlogProject.DataAccess.EntityFramework.EntityTypeConfiguration
 {
     public class AppUserConfig : BaseEntityConfig<AppUser>
     {
+        //BaseEntity üzerinden devam ediyoruz.Çünkü oradaki sınıfımız  temel yapılandırmalarımızıda içeriyor bu yüzden tekrardan IEntityTypeConfiguration'dan kalıtım almamıza gerek kalmıyor. Welcome OOP!!
         public override void Configure(EntityTypeBuilder<AppUser> builder)
         {
             builder.HasKey(x => x.Id);

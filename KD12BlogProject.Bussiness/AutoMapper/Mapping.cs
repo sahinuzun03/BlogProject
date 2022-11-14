@@ -12,6 +12,7 @@ namespace KD12BlogProject.Bussiness.AutoMapper
 {
     public class Mapping : Profile
     {
+        //MAPPİNG KÜTÜPHANESİ BİZE KLASİK VİEW TARAFINDAN GELEN FARKLI TİPTEKİ MODELİN VERİ TABANINA KGÖNDERECEĞİMİZ TİPE DÖNÜŞÜMÜNÜN OTOMATİK OLARAK GERÇEKLEŞMESİNİ SAĞLADIK.
         public Mapping()
         {
             CreateMap<Genre, CreateGenreDTO>().ReverseMap();

@@ -11,6 +11,7 @@ namespace KD12BlogProject.DataAccess.EntityFramework.EntityTypeConfiguration
 {
     public class BaseEntityConfig<T> : IEntityTypeConfiguration<T> where T : class, IBaseEntity
     {
+        //Generic bir configrusayon oluşturuyoruz burada bütün sınıflarımızda bulunan tanımlamalarımızı yapacağız.
         public virtual void Configure(EntityTypeBuilder<T> builder)
         {
             builder.Property(x => x.CreatedDate).IsRequired(true);

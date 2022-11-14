@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 
 namespace KD12BlogProject.Bussiness.Extensions
 {
+    //BURADA RESİM YÜKLERKEN RESİM DOSYALARI HARİCİNDE (JPEG/PNG/JPG) DIŞINDA KALAN DOSYALARIN YÜKLENMESİNİ ENGELLEDİĞİMİZ YAPI
     public class PictureFileExtensionAttribute : ValidationAttribute
     {
         protected override ValidationResult? IsValid(object? value, ValidationContext validationContext)

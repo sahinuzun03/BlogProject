@@ -17,6 +17,13 @@ namespace KD12BlogProject.Bussiness.IoC
 {
     public class DependencyResolver : Module
     {
+        //IoC Nedir : IoC nesnelerin uygulama boyunca ki yaşam döngüsünden sorumludur.Uygulama içerisinde kullanılan objelerin instance'larının yönetilmesini sağlar ve bağımlılığın en aza indirgemeyi amaçlar.
+
+        //
+
+        //AUTOFAC KÜTÜPHANESİ .NET CORE TARAFINDAN GELEN DI'IN YERİNİ ALMAK İÇİN KULLANILMIŞTIR. PEKİ BUNU BİZE .NET CORE'UN DI ' I KARŞILIYORSA NEDEN AUTOFAC'E İHTİYAÇ DUYDUK. BUNUN AÇIKLANMASI İÇİN ASPECT ORİENTED PROGRAMMİNG KONUSUNU İNCELEMENİZ GEREKİYOR.
+
+        // Autofac ile artık builder.Services.AddScoped<GenreRepository,IGenreRepository>() : dememize gerek kalmadı burayı artık DependencResolver yönetiyor.
         protected override void Load(ContainerBuilder builder)
         {
             builder.RegisterType<GenreRepository>().As<IGenreRepository>().InstancePerLifetimeScope();
@@ -32,10 +39,12 @@ namespace KD12BlogProject.Bussiness.IoC
             builder.Register(context => new MapperConfiguration(cfg =>
             {
                 //Register Mapper Profile
+                //Mapping dosyamızıda buraya ekliyoruz gidip startup'ta eklemek zorunda kalmayalım zaten burasının görevi oraya sağlamak olacak.
                 cfg.AddProfile<Mapping>();
             }
             )).AsSelf().SingleInstance();
 
+            
             builder.Register(c =>
             {
                 //This resolves a new context that can be used later.
