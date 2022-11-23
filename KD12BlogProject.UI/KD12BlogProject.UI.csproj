@@ -26,4 +26,11 @@
     <ProjectReference Include="..\KD12BlogProject.DataAccess\KD12BlogProject.DataAccess.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Areas\Admin\Data\" />
+    <Folder Include="Areas\Admin\Models\" />
+    <Folder Include="Areas\Member\Data\" />
+    <Folder Include="Areas\Member\Models\" />
+  </ItemGroup>
+
 </Project>
